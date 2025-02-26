@@ -1,4 +1,5 @@
 require "inventory"
+
 require "cash_box"
 require "errors"
 require "vending_result"
@@ -41,7 +42,7 @@ class VendingMachine
   private
 
   def price_for_slot(slot)
-    price = @inventory.price_at(slot)
+    @inventory.price_at(slot)
   end
 
   def item_exists?(slot)
